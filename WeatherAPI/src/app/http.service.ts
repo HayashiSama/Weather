@@ -16,6 +16,6 @@ export class HttpService {
   constructor(private _http: HttpClient) { }
 	getCity(city){
 
-	    return this._http.get('http://api.openweathermap.org/data/2.5/forecast?id=' + this.cities[city] + "&APPID=25f4b82f08ac4256695cf4a33068c8bd");  
+	    return this._http.get('http://api.openweathermap.org/data/2.5/weather?id=' + this.cities[city] + "&APPID=25f4b82f08ac4256695cf4a33068c8bd");  
 	 }
 }

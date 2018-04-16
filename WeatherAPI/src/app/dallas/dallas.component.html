@@ -1,12 +1,15 @@
 <div *ngIf="city">
-	<h1>Welcome to {{city.city.name}}!</h1>
+	<h1>Welcome to {{city.name}}!</h1>
 	<img src = "https://images.pexels.com/photos/280193/pexels-photo-280193.jpeg?cs=srgb&dl=architecture-buildings-business-280193.jpg&fm=jpg" alt="dallas.jpg" style="height:400px">
   
 
-  <li *ngFor="let i of [0,1,2,3,4,5,6,7]">
-  	
-  	{{city.list[i].dt_txt}} : {{city.list[i].main.temp }} K, {{city.list[i].weather[0].description}}
-  </li>
+    	<p>
+  	Humidity: {{city.main.humidity}} <br>
+  	Temperature (Average): {{city.main.temp}}	<br>
+  	Temperature (High): {{city.main.temp_max}} <br>
+  	Temperature (Low): {{city.main.temp_min }} <br>
+  	Status: {{city.weather[0].description}}
+  </p>
 </div>
 
 
